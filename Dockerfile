@@ -11,7 +11,6 @@ RUN caddy fmt --overwrite Caddyfile
 FROM browserless/chrome:1-chrome-stable
 
 ENV ENABLE_DEBUGGER=true
-ENV DEBUG=browserless:server
 ENV PRINT_NETWORK_INFO=false
 
 COPY --from=caddy /srv/Caddyfile ./
